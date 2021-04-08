@@ -31,4 +31,13 @@ function navSlide(direction) {
 
         activeImg.next("img").addClass("active");
     }
+
+    // Prev
+    else if(direction === "prev") {
+        if(activeImg.hasClass("first")) {
+            $(".images img.last").addClass("active");
+        }
+
+        activeImg.prev("img").addClass("active");
+    }
 }
