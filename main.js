@@ -17,3 +17,18 @@ $(document).ready(function() {
 /*************
  * FUNCTIONS
  ************/
+function navSlide(direction) {
+    var activeImg = $(".images img.active");
+
+    // Reset
+    activeImg.removeClass("active");
+
+    // Next
+    if(direction === "next") {
+        if(activeImg.hasClass("last")) {
+            $(".images img.first").addClass("active");
+        }
+
+        activeImg.next("img").addClass("active");
+    }
+}
